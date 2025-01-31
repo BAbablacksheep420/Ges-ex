@@ -16,10 +16,20 @@
 
     <div class="container">
         <!-- Three Buttons -->
-        <button class="option-button">Option 1</button>
-        <button class="option-button">Option 2</button>
-        <button class="option-button">Option 3</button>
+        <button class="option-button" onclick="window.location.href='about.html'">About Us</button>
+        <button class="option-button" onclick="uploadPicture()">Upload Picture</button>
+        <button class="option-button" onclick="openCamera()">Open Camera</button>
     </div>
 
+    <!-- Hidden File Input for Image Upload -->
+    <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+
+    <!-- Canvas for Drawing -->
+    <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+
+    <!-- Video Element for Camera Stream -->
+    <video id="video" width="640" height="480" autoplay style="display: none;"></video>
+
+    <script src="script.js"></script>
 </body>
 </html>
